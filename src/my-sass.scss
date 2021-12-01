@@ -1,0 +1,100 @@
+$center-align: center;
+$active-link: #F2270B;
+$hover-link: #F2270B;
+$black: #000;
+$white: #fff;
+$movie-image-height: 24em;
+$movie-image-width: 16em;
+
+body {
+  text-align: $center-align;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+//  flex-flow combines flex direction and flex wrap properties
+  justify-content: center;
+}
+
+nav {
+  overflow: hidden;
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+  list-style-type: none;
+  background-color: $black;
+  color: $white;
+
+  a {
+    justify-content: left;
+    display: block;
+    text-align: $center-align;
+    text-decoration: none;
+  }
+
+  li {
+    margin: 2em;
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      color: $hover-link;
+    }
+
+    &:active {
+      color: $active-link;
+    }
+  }
+}
+
+h1 {
+  text-align: $center-align;
+}
+
+.main-image {
+  height: 40%;
+  width: 100%;
+}
+
+.movies {
+  text-align: $center-align;
+  margin: 2em;
+  display: inline-block;
+  cursor: pointer;
+  background-color: $black;
+  color: $white;
+  padding: 0.5em;
+}
+
+.movie-scroll {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.movie-image {
+  height: $movie-image-height;
+  width: $movie-image-width;
+}
+
+.search-bar {
+  margin-top: 4em;
+  height: 2em;
+  width: 16em;
+}
+
+@Media screen and (max-width:970px) {
+  nav {
+
+    li {
+      display: block;
+    }
+
+  }
+
+  .movie-image {
+    height: 22em;
+    width: 14em;
+  }
+}
